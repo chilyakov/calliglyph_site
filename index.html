@@ -1,1 +1,194 @@
-Calliglyph Site
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каллиглиф — живые рукописные послания</title>
+<meta name="description" content="Создавайте эффектные анимации рукописного текста и делитесь ими с друзьями и близкими. Скачайте Каллиглиф в RuStore.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F2EFE8;
+    --ink:#2E3147;
+    --purple:#4B2186;
+    --lavender:#D9C7F5;
+    --muted:#6B6E80;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .container{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  /* ---------- header ---------- */
+  header{padding:28px 0}
+  .header-inner{display:flex;align-items:center;gap:16px}
+  .logo{width:56px;height:56px;border-radius:14px;object-fit:cover;box-shadow:0 2px 10px rgba(46,49,71,.12)}
+  .app-name{font-family:'Caveat',cursive;font-size:34px;font-weight:700;letter-spacing:.5px}
+
+  /* ---------- hero ---------- */
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:48px 0 72px}
+  .slogan{
+    font-family:'Caveat',cursive;
+    font-size:clamp(38px,5.4vw,58px);
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:20px;
+  }
+  .slogan em{font-style:normal;color:var(--purple)}
+  .lead{font-size:19px;color:var(--muted);max-width:480px;margin-bottom:32px}
+  .lead strong{color:var(--ink)}
+
+  .rustore-btn{
+    display:inline-flex;align-items:center;gap:14px;
+    background:var(--ink);color:var(--cream);
+    text-decoration:none;font-weight:800;font-size:17px;
+    padding:16px 28px;border-radius:16px;
+    box-shadow:0 8px 24px rgba(46,49,71,.25);
+    transition:transform .2s, box-shadow .2s, background .2s;
+  }
+  .rustore-btn:hover{transform:translateY(-3px);background:var(--purple);box-shadow:0 12px 28px rgba(75,33,134,.35)}
+  .rustore-btn svg{flex-shrink:0}
+
+  /* ---------- phone frames ---------- */
+  .phone{
+    width:min(320px,100%);
+    border-radius:32px;
+    border:6px solid var(--ink);
+    overflow:hidden;
+    background:#000;
+    box-shadow:0 20px 50px rgba(46,49,71,.28);
+  }
+  .phone video,.phone img{display:block;width:100%;height:auto}
+  .hero-media{display:flex;justify-content:center}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0}
+  h2{
+    font-family:'Caveat',cursive;
+    font-size:clamp(32px,4.2vw,44px);
+    font-weight:700;
+    margin-bottom:32px;
+  }
+
+  /* features */
+  .features{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .features-list{list-style:none;display:flex;flex-direction:column;gap:14px;font-size:17.5px}
+  .features-list li{display:flex;gap:14px;align-items:baseline}
+  .features-list li::before{
+    content:"✒";font-size:16px;color:var(--purple);transform:translateY(1px);
+  }
+  .features .phone{margin:0 auto}
+
+  /* gallery */
+  .gallery{display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
+  .gallery figure{width:min(280px,100%);text-align:center}
+  .gallery .phone{border-radius:28px;transition:transform .25s}
+  .gallery .phone:hover{transform:translateY(-6px) rotate(-1deg)}
+  .gallery figcaption{margin-top:14px;color:var(--muted);font-size:15px}
+
+  /* footer */
+  footer{
+    border-top:1px solid rgba(46,49,71,.15);
+    padding:36px 0;text-align:center;color:var(--muted);font-size:14.5px;
+  }
+  footer a{color:var(--purple);font-weight:600;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  /* ---------- adaptive ---------- */
+  @media (max-width:880px){
+    .hero{grid-template-columns:1fr;gap:44px;text-align:center;padding-top:20px}
+    .lead{margin-left:auto;margin-right:auto}
+    .features{grid-template-columns:1fr;gap:44px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <img src="img/logo.png" alt="Логотип Каллиглиф" class="logo">
+    <div class="app-name">Calliglyph · Каллиглиф</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:24px">
+    <div>
+      <h1 class="slogan">Каллиглиф — <em>живые рукописные послания</em></h1>
+      <p class="lead">Создавайте эффектные <strong>анимации рукописного текста</strong> и делитесь ими с друзьями и близкими.</p>
+      <a class="rustore-btn" href="https://www.rustore.ru/catalog/app/ru.chilyakov.calliglyph" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        Скачать в RuStore
+      </a>
+    </div>
+    <div class="hero-media">
+      <div class="phone">
+        <video src="video/calliglyph.mp4" autoplay muted loop playsinline controls></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <h2>В приложении можно:</h2>
+    <div class="features">
+      <ul class="features-list">
+        <li>ввести любой текст и разбить его на отдельные слои;</li>
+        <li>настроить скорость написания, паузу и плавность появления;</li>
+        <li>выбрать цвет текста и фон;</li>
+        <li>оценить результат в режиме предпросмотра;</li>
+        <li>экспортировать готовую анимацию в видео;</li>
+        <li>делиться созданным видео через другие приложения.</li>
+      </ul>
+      <div class="phone">
+        <img src="img/screenshot1.png" alt="Скриншот приложения Каллиглиф">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="screens">
+    <h2>Как это выглядит</h2>
+    <div class="gallery">
+      <figure>
+        <div class="phone"><img src="img/screenshot1.png" alt="Анимация Happy Birthday"></div>
+        <figcaption>Поздравления на любом языке</figcaption>
+      </figure>
+      <figure>
+        <div class="phone"><img src="img/screenshot2.png" alt="Анимация С днём рождения"></div>
+        <figcaption>Живое рукописное письмо</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section>
+    <p style="max-width:720px;font-size:18px;color:var(--muted)">
+      Каллиглиф подойдет для создания подписей, поздравлений, коротких заставок,
+      обучающих материалов, публикаций и просто красивых рукописных анимаций.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2025 Каллиглиф (Calliglyph) · <a href="https://www.rustore.ru/catalog/app/ru.chilyakov.calliglyph" target="_blank" rel="noopener">Скачать в RuStore</a>
+  </div>
+</footer>
+
+</body>
+</html>
